@@ -4,7 +4,7 @@ from keras.utils.data_utils import get_file
 from keras import backend as K
 import numpy as np
 import os
-#(x_train, y_train), (x_test, y_test)=load_data()
+
 def load_data():
     path = '/home/ubuntu/keras/cifar-10-batches-py'
     num_train_samples = 50000
@@ -23,3 +23,6 @@ def load_data():
         x_train = x_train.transpose(0, 2, 3, 1)
         x_test = x_test.transpose(0, 2, 3, 1)
     return (x_train, y_train), (x_test, y_test)
+
+if __name__ == '__main__':
+    (x_train, y_train), (x_test, y_test)=load_data()
